@@ -4,6 +4,8 @@ Escrever um programa que simule este jogo de dados, solicitando via teclado a le
 
 #include <stdio.h>
 
+#define LIMITE_PONTOS 11
+
 int main() {
 
     int dadoJogador1, dadoJogador2, pontosJogador1, pontosJogador2, jogada;
@@ -35,7 +37,7 @@ int main() {
             printf("Nenhum dos jogadores pontuou nessa jogada!\n");
         }
 
-    } while (pontosJogador1 < 11 && pontosJogador2 < 11);
+    } while (pontosJogador1 < LIMITE_PONTOS && pontosJogador2 < LIMITE_PONTOS);
 
     printf("\nResultado final:\n");
     printf("Pontos jogador 1: %d\n", pontosJogador1);
