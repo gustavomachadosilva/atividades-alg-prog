@@ -45,9 +45,12 @@ int main() {
         if (resultadosClubes[i][COLUNA_PONTUACAO] > pontuacaoCampeao) {
             pontuacaoViceCampeao = pontuacaoCampeao;
             indiceViceCampeao = indiceCampeao;
-            
             pontuacaoCampeao = resultadosClubes[i][COLUNA_PONTUACAO];
             indiceCampeao = i;
+        }
+        else if ((resultadosClubes[i][COLUNA_PONTUACAO] > pontuacaoViceCampeao && resultadosClubes[i][COLUNA_PONTUACAO] < pontuacaoCampeao) || (indiceCampeao == indiceViceCampeao)) {
+            pontuacaoViceCampeao = resultadosClubes[i][COLUNA_PONTUACAO];
+            indiceViceCampeao = i;
         }
 
     }
