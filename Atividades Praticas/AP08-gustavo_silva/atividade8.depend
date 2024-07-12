@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1720201595 source:c:\users\aluno\desktop\atividade8\ex1.c
+	"raylib.h"
+	<string.h>
+

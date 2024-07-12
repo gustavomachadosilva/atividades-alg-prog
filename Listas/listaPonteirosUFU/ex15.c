@@ -1,4 +1,4 @@
-/* Crie uma func ̧a ̃o que receba como paraˆmetro um array e o imprima. Na ̃o utilize  ́ındices para percorrer o array, 
+/* Crie uma func ̧a ̃o que receba como paraˆmetro um array e o imprima. Na ̃o utilize indices para percorrer o array, 
 apenas aritme ́tica de ponteiros. */
 
 #include <stdio.h>

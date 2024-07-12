@@ -1,9 +1,9 @@
 /* Faça um programa completo para o seguinte algoritmo :
 
 1. Preencher matriz 6 x 4 com os seguintes valores inteiros: 
-0 - sempre que o índice da linha for igual ao da coluna; 
-1 - sempre que o índice da linha for menor que o da coluna; 
-2 - nos demais casos.
+    0 - sempre que o índice da linha for igual ao da coluna; 
+    1 - sempre que o índice da linha for menor que o da coluna; 
+    2 - nos demais casos.
 
 2. Copie para um vetor de 20 posições, os elementos não zero desta matriz. */
 
@@ -15,10 +15,11 @@
 
 int main() {
 
-    int i, j;
-    int posicaoMatrizCopia;
+    int i, j, posicaoVetor;
     int matriz[MAX_LINHAS][MAX_COLUNAS];
-    int matrizCopia[MAX_POSICOES];
+    int vetor[MAX_POSICOES];
+
+    posicaoVetor = 0;
 
     for (i=0; i<MAX_LINHAS; i++) {
 
@@ -33,49 +34,20 @@ int main() {
             else {
                 matriz[i][j] = 2;
             }
-
-        }
-
-    }
-
-
-    posicaoMatrizCopia = 0;
-
-    for (i=0; i<MAX_LINHAS; i++) {
-
-        for (j=0; j<MAX_COLUNAS; j++) {
-
+            
             if (matriz[i][j] != 0) {
-                matrizCopia[posicaoMatrizCopia] = matriz[i][j];
-                posicaoMatrizCopia++;
+            vetor[posicaoVetor] = matriz[i][j];
+            posicaoVetor++;
             }
 
         }
 
     }
 
-
-    printf("\nMatriz original:\n");
-
-    for (i=0; i<MAX_LINHAS; i++) {
-
-        printf("\n");
-
-        for (j=0; j<MAX_COLUNAS; j++) {
-            printf("\t%d", matriz[i][j]);
-        }
-
-    }
-
-    printf("\n\nVetor de nao nulos:\n\n");
-
+    printf("\nVetor:");
     for (i=0; i<MAX_POSICOES; i++) {
-
-        printf("  %d", matrizCopia[i]);
-
+        printf("  %d", vetor[i]);
     }
-
-    printf("\n");
 
     return 0;
 }
